@@ -2,6 +2,7 @@ import AstalNotifd from 'gi://AstalNotifd?version=0.1';
 import { Actions } from './Actions';
 import { Body } from './Body';
 import { CloseButton } from './CloseButton';
+import { SilentButton } from './SilentButton';
 import { Header } from './Header';
 import { Image } from './Image';
 import { Gtk, Widget } from 'astal/gtk3';
@@ -44,6 +45,7 @@ export const NotificationCard = ({ notification, showActions, ...props }: Notifi
             <box className={'notification-card'} {...props} hexpand valign={Gtk.Align.START}>
                 <Image notification={notification} />
                 <NotificationContent notification={notification} actionBox={actionBox} />
+                <SilentButton notification={notification} />
                 <CloseButton notification={notification} />
             </box>
         </eventbox>

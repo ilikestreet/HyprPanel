@@ -120,6 +120,10 @@ const options = mkOptions(CONFIG, {
             time: opt(secondary_colors.overlay1),
             text: opt(colors.text),
             labelicon: opt(colors.lavender),
+            silent_button: {
+                background: opt(colors.mauve),
+                label: opt(colors.crust),
+            },
             close_button: {
                 background: opt(secondary_colors.red),
                 label: opt(colors.crust),
